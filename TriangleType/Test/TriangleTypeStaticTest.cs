@@ -276,5 +276,23 @@ namespace Triangle.Triangle
 
             CollectionAssert.AreEqual(new TriangleTypes[] { TriangleTypes.EQUILATERAL_TRIANGLE, TriangleTypes.ISOSCELES_TRIANGLE, TriangleTypes.ACUTE_TRIANGLE }, result);
         }
+
+        [TestMethod]
+        public void TestSumTwoEqualThirdFirst()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 10, 5, 5 }).IsTriangle());
+        }
+
+        [TestMethod]
+        public void TestSumTwoEqualThirdSecond()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 5, 10, 5 }).IsTriangle());
+        }
+
+        [TestMethod]
+        public void TestSumTwoEqualThirdThird()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 5, 5, 10 }).IsTriangle());
+        }
     }
 }
