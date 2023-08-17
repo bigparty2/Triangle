@@ -294,5 +294,23 @@ namespace Triangle.Triangle
         {
             Assert.IsFalse(new TriangleType(new int[] { 5, 5, 10 }).IsTriangle());
         }
+
+        [TestMethod]
+        public void TestSumTwoLessThanFirstThird()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 3, 1, 5 }).IsTriangle());
+        }
+
+        [TestMethod]
+        public void TestSumTwoLessThanSecoundThird()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 3, 5, 1 }).IsTriangle());
+        }
+
+        [TestMethod]
+        public void TestSumTwoLessThanThirdThird()
+        {
+            Assert.IsFalse(new TriangleType(new int[] { 5, 3, 1 }).IsTriangle());
+        }
     }
 }
